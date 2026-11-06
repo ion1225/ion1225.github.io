@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人人影视官网-人人影视官网下载_影视资源站访问与使用说明</title>
+<meta name="description" content="人人影视官网首页，说明人人影视官网的站点定位、资源分类、访问方式与常见问题，帮助访问者了解人人影视官网能做什么、如何找到入口与使用注意事项。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e1720'/%3E%3Crect x='12' y='18' width='40' height='28' rx='5' fill='none' stroke='%23ffb020' stroke-width='4'/%3E%3Cpath d='M27 26l12 6-12 6z' fill='%23ffb020'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#0e1720;
+    --ink-2:#1b2733;
+    --paper:#f6f4ef;
+    --card:#ffffff;
+    --line:#e2ddd3;
+    --amber:#ffb020;
+    --amber-deep:#c97f06;
+    --text:#22303c;
+    --muted:#5f6b76;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--text);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,-apple-system,sans-serif;
+    line-height:1.75;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 22px;}
+
+  /* ---------- header ---------- */
+  header.site{
+    background:var(--ink);
+    color:#f2efe9;
+    position:sticky;
+    top:0;
+    z-index:50;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .bar{
+    display:flex;align-items:center;gap:18px;
+    min-height:64px;
+    flex-wrap:wrap;
+    padding-top:10px;padding-bottom:10px;
+  }
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.02em;font-size:17px;}
+  .brand .mark{
+    width:34px;height:34px;flex:0 0 34px;
+    border-radius:9px;
+    background:linear-gradient(150deg,#243444,#101a24);
+    display:grid;place-items:center;
+    border:1px solid rgba(255,176,32,.45);
+  }
+  .brand .mark svg{width:20px;height:20px;}
+  nav.top{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap;}
+  nav.top a{
+    padding:7px 12px;border-radius:8px;
+    font-size:14.5px;color:#d7d2c9;
+    transition:background .18s,color .18s;
+  }
+  nav.top a:hover{background:rgba(255,255,255,.09);color:#fff;}
+  nav.top a.cta{
+    background:var(--amber);color:#1a1206;font-weight:700;
+  }
+  nav.top a.cta:hover{background:#ffc24a;color:#1a1206;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:
+      radial-gradient(900px 380px at 88% -10%,rgba(255,176,32,.20),transparent 62%),
+      linear-gradient(170deg,#101c27 0%,#16242f 55%,#1a2b38 100%);
+    color:#f4f1ea;
+    padding:56px 0 52px;
+    border-bottom:1px solid rgba(255,255,255,.07);
+  }
+  .hero-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:40px;align-items:center;}
+  .kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;letter-spacing:.14em;
+    color:#ffcf72;text-transform:uppercase;
+    border:1px solid rgba(255,176,32,.4);
+    padding:4px 11px;border-radius:999px;
+    margin-bottom:16px;
+  }
+  .kicker i{width:6px;height:6px;border-radius:50%;background:var(--amber);display:block;}
+  h1{
+    font-size:clamp(26px,4.2vw,40px);
+    line-height:1.28;
+    margin:0 0 16px;
+    font-weight:800;
+    letter-spacing:.01em;
+  }
+  .hero p.lead{
+    margin:0 0 24px;
+    color:#c9c4ba;
+    font-size:16px;
+    max-width:36em;
+  }
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:11px 20px;border-radius:10px;
+    font-weight:700;font-size:15px;
+    border:1px solid transparent;
+    transition:transform .15s,background .18s,border-color .18s;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn.primary{background:var(--amber);color:#1a1206;}
+  .btn.primary:hover{background:#ffc24a;}
+  .btn.ghost{background:transparent;color:#f0ece4;border-color:rgba(255,255,255,.28);}
+  .btn.ghost:hover{border-color:rgba(255,255,255,.6);}
+  .btn[aria-disabled="true"]{
+    background:#3a4652;color:#b9c2cb;pointer-events:none;cursor:default;
+  }
+  .hero-note{margin-top:14px;font-size:13px;color:#9aa4ae;}
+
+  .hero-art{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:18px;
+    padding:18px;
+  }
+  .hero-art .row{
+    display:flex;gap:10px;align-items:center;
+    padding:9px 10px;border-radius:10px;
+    background:rgba(255,255,255,.05);
+    margin-bottom:9px;
+    font-size:13.5px;color:#d6d1c8;
+  }
+  .hero-art .row:last-child{margin-bottom:0;}
+  .hero-art .row .dot{width:8px;height:8px;border-radius:2px;background:var(--amber);flex:0 0 8px;}
+  .hero-art .bar-mini{height:6px;border-radius:3px;background:rgba(255,255,255,.16);flex:1;}
+
+  /* ---------- sections ---------- */
+  section{padding:52px 0;}
+  section.alt{background:#fffdf8;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .sec-head{max-width:44em;margin-bottom:26px;}
+  .sec-head h2{
+    font-size:clamp(20px,2.6vw,26px);
+    margin:0 0 8px;font-weight:800;color:var(--ink);line-height:1.35;
+  }
+  .sec-head p{margin:0;color:var(--muted);font-size:15px;}
+  .eyebrow{
+    font-size:12.5px;letter-spacing:.16em;color:var(--amber-deep);
+    font-weight:700;text-transform:uppercase;margin-bottom:6px;
+  }
+
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:18px;
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px 20px;
+    box-shadow:0 1px 0 rgba(14,23,32,.03);
+  }
+  .card .ico{
+    width:38px;height:38px;border-radius:10px;
+    background:#fff5e0;border:1px solid #ffe3ae;
+    display:grid;place-items:center;margin-bottom:14px;
+  }
+  .card .ico svg{width:20px;height:20px;}
+  .card h3{margin:0 0 8px;font-size:16.5px;font-weight:700;color:var(--ink);}
+  .card p{margin:0;font-size:14.6px;color:#4b5865;}
+
+  /* ---------- steps ---------- */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;counter-reset:s;}
+  .step{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 20px 20px;position:relative;
+  }
+  .step::before{
+    counter-increment:s;content:counter(s);
+    position:absolute;top:-13px;left:20px;
+    width:28px;height:28px;border-radius:8px;
+    background:var(--ink);color:var(--amber);
+    font-weight:800;font-size:14px;
+    display:grid;place-items:center;
+  }
+  .step h3{margin:6px 0 8px;font-size:16px;color:var(--ink);}
+  .step p{margin:0;font-size:14.5px;color:#4b5865;}
+
+  /* ---------- faq ---------- */
+  .faq{display:grid;gap:12px;max-width:860px;}
+  details{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:16px 18px;
+  }
+  details[open]{border-color:#f0d59c;background:#fffdf6;}
+  summary{
+    cursor:pointer;font-weight:700;color:var(--ink);font-size:15.4px;
+    list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";color:var(--amber-deep);font-weight:800;font-size:18px;line-height:1;}
+  details[open] summary::after{content:"–";}
+  details p{margin:10px 0 0;font-size:14.6px;color:#4b5865;}
+
+  /* ---------- notice / table ---------- */
+  .notice{
+    display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:start;
+  }
+  .notice .box{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;
+  }
+  .notice h3{margin:0 0 10px;font-size:16.5px;color:var(--ink);}
+  .notice ul{margin:0;padding-left:20px;font-size:14.7px;color:#4b5865;}
+  .notice li{margin-bottom:7px;}
+  table{width:100%;border-collapse:collapse;font-size:14.4px;}
+  caption{text-align:left;font-weight:700;color:var(--ink);padding-bottom:8px;font-size:15px;}
+  th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top;}
+  th{color:var(--muted);font-weight:600;width:36%;}
+
+  /* ---------- footer ---------- */
+  footer.site{
+    background:var(--ink);color:#b9c2cb;padding:38px 0 30px;font-size:14px;
+  }
+  footer.site .fgrid{display:flex;gap:22px;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;}
+  footer.site strong{color:#f2efe9;display:block;margin-bottom:6px;font-size:15px;}
+  footer.site a{color:#d8b678;}
+  footer.site a:hover{text-decoration:underline;}
+  .copy{margin-top:22px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:#8b96a1;}
+
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-art{order:-1;}
+    .notice{grid-template-columns:1fr;}
+    .hero{padding:38px 0 40px;}
+    section{padding:40px 0;}
+  }
+  @media (max-width:560px){
+    body{font-size:15.5px;}
+    .bar{min-height:auto;padding-top:12px;padding-bottom:12px;}
+    nav.top{margin-left:0;width:100%;}
+    nav.top a{padding:6px 9px;font-size:13.6px;}
+    .brand{font-size:15.6px;}
+    .hero-actions .btn{flex:1 1 auto;justify-content:center;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <div class="brand">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="5.5" width="19" height="13" rx="3" stroke="#ffb020" stroke-width="1.8"/><path d="M10 9.5l5 2.5-5 2.5z" fill="#ffb020"/></svg>
+      </span>
+      人人影视官网
+    </div>
+    <nav class="top" aria-label="主导航">
+      <a href="#about">站点概况</a>
+      <a href="#resources">资源分类</a>
+      <a href="#access">访问方式</a>
+      <a href="#faq">常见问题</a>
+      <a href="#notice">使用提醒</a>
+      <a class="cta" href="#access">查看入口</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker"><i></i>影视资源站 · 首页</span>
+        <h1 id="hero-title">人人影视官网</h1>
+        <p class="lead">
+          人人影视官网是一个面向影视爱好者的资源聚合站点入口页。这里集中说明人人影视官网的站点定位、资源分类方式与访问路径，
+          方便第一次接触的访问者快速判断它是否适合自己，也方便老用户找到常用栏目。
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#resources">浏览资源分类</a>
+          <a class="btn ghost" href="#faq">先看常见问题</a>
+        </div>
+        <p class="hero-note">提示：本站为信息说明页，不存储任何影视文件，具体资源归属与版权以权利方为准。</p>
+      </div>
+      <aside class="hero-art" aria-label="栏目示意">
+        <div class="row"><span class="dot"></span>电影 · 剧集 · 纪录片<span class="bar-mini"></span></div>
+        <div class="row"><span class="dot"></span>字幕 · 分集 · 版本说明<span class="bar-mini"></span></div>
+        <div class="row"><span class="dot"></span>入口 · 公告 · 使用提醒<span class="bar-mini"></span></div>
+        <div class="row"><span class="dot"></span>常见问题与访问建议<span class="bar-mini"></span></div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">站点概况</div>
+        <h2>人人影视官网是做什么的</h2>
+        <p>把“人人影视官网”放回它真实的语境里看：它首先是一个影视资源与字幕信息的汇集入口，而不是内容制作方。</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2.5" stroke="#c97f06" stroke-width="1.7"/><path d="M3 10h18" stroke="#c97f06" stroke-width="1.7"/></svg></div>
+          <h3>资源入口属性</h3>
+          <p>人人影视官网的主要作用是提供索引与导航，把分散的影视条目、字幕信息和版本说明整理到可检索的栏目中，访问者据此判断内容是否符合需求。</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="#c97f06" stroke-width="1.7"/><path d="M12 7.5v5l3.2 1.9" stroke="#c97f06" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+          <h3>信息更新节奏</h3>
+          <p>影视条目随上线与下档变化，人人影视官网的栏目内容也会随之调整。访问时以页面当时展示的条目为准，历史条目可能不再保留。</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5 11-11" stroke="#c97f06" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>对访问者的价值</h3>
+          <p>对普通观众，人人影视官网解决的是“去哪找、怎么找、找到后看什么”的问题；对字幕需求者，它解决的是版本与语种的对应关系问题。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="resources">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">资源分类</div>
+        <h2>人人影视官网常见的栏目结构</h2>
+        <p>不同时期的人人影视官网在栏目命名上会有出入，但核心分类逻辑相对稳定，下面按内容形态归纳。</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h3>电影与剧集</h3>
+          <p>电影条目通常按年份、地区、类型归档；剧集则按季与集拆分，并标注更新到第几集。这是人人影视官网访问量最高的两个大类。</p>
+        </div>
+        <div class="card">
+          <h3>字幕与语种</h3>
+          <p>字幕是人人影视官网区别于普通影视索引站的重点。条目下一般能看到语种、字幕格式与对应版本，选择前先核对片源版本是否一致。</p>
+        </div>
+        <div class="card">
+          <h3>纪录片与专题</h3>
+          <p>纪录片、动画与专题合集更新较慢但条目稳定，适合按主题浏览。人人影视官网会为这类内容单独设区，便于长期追看。</p>
+        </div>
+        <div class="card">
+          <h3>公告与帮助</h3>
+          <p>站点公告、域名变化与访问说明通常放在显眼位置。初次访问人人影视官网时，先读公告比直接找片更省时间。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="access">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">访问方式</div>
+        <h2>如何找到并使用人人影视官网</h2>
+        <p>入口地址可能随运营调整而变化，以下流程适用于大多数情况，重点在于核对来源而不是记住某个具体域名。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>确认官方来源</h3>
+          <p>优先通过站点公告或长期可信的导航页确认当前地址。名称相似、界面粗糙的页面未必是人人影视官网，避免在陌生页面输入账号信息。</p>
+        </div>
+        <div class="step">
+          <h3>浏览栏目索引</h3>
+          <p>进入后先看资源分类与最新更新，用年份、类型或关键词缩小范围。人人影视官网的检索入口通常位于页面顶部或侧边。</p>
+        </div>
+        <div class="step">
+          <h3>核对版本信息</h3>
+          <p>选定条目前，确认清晰度、语种与字幕版本是否匹配。同一部作品可能有多个版本，选错版本会直接影响观看体验。</p>
+        </div>
+        <div class="step">
+          <h3>留意使用边界</h3>
+          <p>影视内容的版权归权利方所有。使用人人影视官网时，请遵守当地法律法规，支持正版渠道，不传播、不转售获取到的内容。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">常见问题</div>
+        <h2>关于人人影视官网的高频疑问</h2>
+        <p>以下回答基于站点的一般运营方式归纳，具体以人人影视官网当时的页面说明为准。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>人人影视官网是官方内容制作方吗？</summary>
+          <p>不是。人人影视官网承担的是资源索引与字幕信息汇集的功能，影视作品的著作权属于各自的制作方与发行方，站点本身不主张内容版权。</p>
+        </details>
+        <details>
+          <summary>为什么有时打不开人人影视官网？</summary>
+          <p>入口地址可能因运营调整、网络环境或域名变更而失效。建议先查看公告页与可信导航来源，确认最新地址后再访问，不要轻信来源不明的短链接。</p>
+        </details>
+        <details>
+          <summary>条目里的字幕和片源对不上怎么办？</summary>
+          <p>先核对片源版本号与时长，再看字幕标注的帧率与语种。人人影视官网的条目通常会在说明中标注适配版本，按标注重新选择即可。</p>
+        </details>
+        <details>
+          <summary>使用人人影视官网需要注册吗？</summary>
+          <p>是否需要账号取决于当时的站点设置，部分功能可能要求登录后才能查看。无论是否注册，都应避免在非确认页面填写敏感个人信息。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="notice">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">使用提醒</div>
+        <h2>访问人人影视官网前的几点确认</h2>
+        <p>把这几条看完，能减少大部分“找不到、打不开、下错了”的困扰。</p>
+      </div>
+      <div class="notice">
+        <div class="box">
+          <h3>建议核对的事项</h3>
+          <ul>
+            <li>地址来源是否可信，是否与公告一致。</li>
+            <li>条目更新日期，避免参考过期信息。</li>
+            <li>字幕语种、格式与片源版本是否匹配。</li>
+            <li>页面是否要求提供与浏览无关的个人信息。</li>
+          </ul>
+        </div>
+        <div class="box">
+          <table>
+            <caption>栏目速查</caption>
+            <tbody>
+              <tr><th>电影</th><td>按年份、地区、类型归档</td></tr>
+              <tr><th>剧集</th><td>按季集拆分，标注更新进度</td></tr>
+              <tr><th>字幕</th><td>标注语种、格式与适配版本</td></tr>
+              <tr><th>公告</th><td>地址变化与访问说明</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <strong>人人影视官网</strong>
+        影视资源与字幕信息的索引入口说明页，帮助访问者了解栏目结构与访问方式。
+      </div>
+      <div>
+        <strong>页面导航</strong>
+        <a href="#about">站点概况</a> · <a href="#resources">资源分类</a> · <a href="#access">访问方式</a> · <a href="#faq">常见问题</a>
+      </div>
+      <div>
+        <strong>内容说明</strong>
+        本页不存储影视文件，资源版权归权利方所有，请通过合法渠道观看。
+      </div>
+    </div>
+    <div class="copy">人人影视官网 · 信息说明页 · 内容以实际页面为准</div>
+  </div>
+</footer>
+
+</body>
+</html>
